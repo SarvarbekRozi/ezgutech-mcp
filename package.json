@@ -1,0 +1,31 @@
+{
+  "name": "xpert-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EZGUTECH CRM uchun MCP server — Claude'ga hisobotlarni faqat o'qish uchun ochadi",
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "bin": {
+    "xpert-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:http": "node scripts/smoke-http.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
